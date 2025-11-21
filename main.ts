@@ -6,23 +6,23 @@
  */
 
 // Declare variables
-let studentName: string;
-let age: number;
-let isStudent: boolean;
+let studentName: string = "";
+let age: number = 0;
+let isStudent: boolean = false;
 
 // Initialize variables
 studentName = prompt("Enter your name:") || "";
 age = Number(prompt("Enter your age:") || "0");
-isStudent = prompt("Are you a student? (true/false):")?.trim().toLowerCase() === "true";
+isStudent = (prompt("Are you a student? (true/false)") || "false").trim().toLowerCase() === "true";
 
 // Output
 if (isStudent) {
   if (age >= 13 && age <= 19) {
-    console.log(`Student ${studentName} is a teenager.`);
+    console.log(`Student: ${studentName} is a teenager.`);
   } else if (age >= 5 && age <= 12) {
-    console.log(`Student ${studentName} is a child.`);
+    console.log(`Student: ${studentName} is a child.`);
   } else {
-    console.log(`Student ${studentName} is in a different life stage.`);
+    console.log(`Student: ${studentName} is in a different life stage.`);
   }
 } else {
   if (age >= 20 && age <= 30) {
