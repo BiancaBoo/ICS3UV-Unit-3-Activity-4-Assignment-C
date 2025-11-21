@@ -13,7 +13,7 @@ let isStudent: boolean;
 // Initialize variables
 studentName = prompt("Enter your name:") || "";
 age = Number(prompt("Enter your age:") || "0");
-isStudent = prompt("Are you a student? (true/false):")?.toLowerCase() === "true";
+isStudent = prompt("Are you a student? (true/false):")?.trim().toLowerCase() === "true";
 
 // Output
 if (isStudent) {
